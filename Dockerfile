@@ -13,7 +13,6 @@ COPY . .
 
 RUN composer install --optimize-autoloader --no-dev
 
-RUN cp .env.example .env || true
 RUN php artisan key:generate --no-interaction --force
 
 RUN chown -R www-data:www-data storage bootstrap/cache && chmod -R 775 storage bootstrap/cache

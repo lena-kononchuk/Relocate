@@ -23,6 +23,7 @@ WORKDIR /var/www
 COPY . .
 
 RUN cp .env.example .env || true
+RUN php artisan key:generate --no-interaction --force
 
 RUN composer install --optimize-autoloader --no-dev
 

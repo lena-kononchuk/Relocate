@@ -14,8 +14,8 @@ vendor/
 
 # Environment configuration
 .env
-.env.backup
-.env.production
+.env.*
+!.env.example
 
 # Logs
 npm-debug.log
@@ -31,16 +31,12 @@ yarn-error.log
 # IDEs and Editors
 /.idea
 /.vscode
+.fleet/
 
 # Local development environment files
 Homestead.json
 Homestead.yaml
-
-# Other local files
 auth.json
-
-# Fleet files (if using Fleet IDE)
-.fleet/
 
 # Docker
 docker-compose.override.yml
@@ -51,11 +47,21 @@ docker-compose.override.yml
 # Windows
 Thumbs.db
 
+# Storage (except .gitkeep)
+storage/app/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/testing/*
+storage/framework/views/*
+storage/logs/*
+!storage/app/.gitkeep
+!storage/framework/.gitkeep
+!storage/framework/cache/.gitkeep
+!storage/framework/sessions/.gitkeep
+!storage/framework/testing/.gitkeep
+!storage/framework/views/.gitkeep
+!storage/logs/.gitkeep
 
-storage/*
-!storage/.gitkeep
-
-public/storage
-node_modules/
-.idea/
-*.log
+# Bootstrap cache
+bootstrap/cache/*
+!bootstrap/cache/.gitkeep

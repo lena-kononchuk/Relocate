@@ -5,6 +5,7 @@ node_modules/
 public/build/
 public/hot/
 public/storage/
+dist/
 
 # PHP
 vendor/
@@ -32,6 +33,7 @@ yarn-error.log
 /.idea
 /.vscode
 .fleet/
+.editorconfig
 
 # Local development environment files
 Homestead.json
@@ -40,6 +42,9 @@ auth.json
 
 # Docker
 docker-compose.override.yml
+Dockerfile
+docker-compose.yml
+php.ini
 
 # MacOS
 .DS_Store
@@ -65,3 +70,11 @@ storage/logs/*
 # Bootstrap cache
 bootstrap/cache/*
 !bootstrap/cache/.gitkeep
+
+# Database
+*.sqlite
+*.sqlite-journal
+database/*.sqlite
+
+# Composer lock (optional, uncomment if needed)
+# composer.lock
